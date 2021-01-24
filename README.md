@@ -17,24 +17,29 @@ Java: Java 8
 
 ## Role Variables
 
-    zookeeper_mirror: http://www-eu.apache.org/dist/zookeeper
-    zookeeper_version: 3.6.2
-    zookeeper_package: apache-zookeeper-{{ zookeeper_version }}-bin.tar.gz
-    zookeeper_group: zookeeper
-    zookeeper_user: zookeeper
-    zookeeper_root_dir: /usr/share
-    zookeeper_install_dir: '{{ zookeeper_root_dir}}/apache-zookeeper-{{zookeeper_version}}'
-    zookeeper_dir: '{{ zookeeper_root_dir }}/zookeeper'
-    zookeeper_log_dir: /var/log/zookeeper
-    zookeeper_data_dir: /var/lib/zookeeper
-    zookeeper_data_log_dir: /var/lib/zookeeper
-    zookeeper_client_port: 2181
-    zookeeper_id: 1
-    zookeeper_leader_port: 2888
-    zookeeper_election_port: 3888
-    zookeeper_servers: "{{groups['zookeeper-nodes']}}"
-    zookeeper_environment:
-        "JVMFLAGS": "-javaagent:/opt/jolokia/jolokia-jvm-1.6.0-agent.jar"
+<!-- markdownlint-disable MD013 -->
+
+| Variable                | Default                                                           |
+| ----------------------- | ----------------------------------------------------------------- |
+| zookeeper_mirror        | <http://www-eu.apache.org/dist/zookeeper>                         |
+| zookeeper_version       | 3.6.2                                                             |
+| zookeeper_package       | apache-zookeeper-{{ zookeeper_version }}-bin.tar.gz               |
+| zookeeper_group         | zookeeper                                                         |
+| zookeeper_user          | zookeeper                                                         |
+| zookeeper_root_dir      | /usr/share                                                        |
+| zookeeper_install_dir   | '{{ zookeeper_root_dir}}/apache-zookeeper-{{zookeeper_version}}'  |
+| zookeeper_dir           | '{{ zookeeper_root_dir }}/zookeeper'                              |
+| zookeeper_log_dir       | /var/log/zookeeper                                                |
+| zookeeper_data_dir      | /var/lib/zookeeper                                                |
+| zookeeper_data_log_dir  | /var/lib/zookeeper                                                |
+| zookeeper_client_port   | 2181                                                              |
+| zookeeper_id            | 1                                                                 |
+| zookeeper_leader_port   | 2888                                                              |
+| zookeeper_election_port | 3888                                                              |
+| zookeeper_servers       | "{{groups['zookeeper-nodes']}}"                                   |
+| zookeeper_environment   | "JVMFLAGS": "-javaagent:/opt/jolokia/jolokia-jvm-1.6.0-agent.jar" |
+
+<!-- markdownlint-enable MD013 -->
 
 ### Default Ports
 
@@ -46,6 +51,8 @@ Java: Java 8
 
 ### Default Directories and Files
 
+<!-- markdownlint-disable MD013 -->
+
 | Description                                | Directory / File                            |
 | ------------------------------------------ | ------------------------------------------- |
 | Installation directory                     | `/usr/share/apache-zookeeper-<version>`     |
@@ -56,6 +63,8 @@ Java: Java 8
 | Data directory for transaction log files   | `/var/lib/zookeeper`                        |
 | Systemd service                            | `/usr/lib/systemd/system/zookeeper.service` |
 | System Defaults                            | `/etc/default/zookeeper`                    |
+
+<!-- markdownlint-enable MD013 -->
 
 ## Starting and Stopping ZooKeeper services
 
