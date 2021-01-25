@@ -1,6 +1,8 @@
 # Apache ZooKeeper
 
 [![Build Status](https://travis-ci.org/sleighzy/ansible-zookeeper.svg?branch=master)](https://travis-ci.org/sleighzy/ansible-zookeeper)
+![Lint Code Base](https://github.com/sleighzy/ansible-zookeeper/workflows/Lint%20Code%20Base/badge.svg)
+![Ansible Lint](https://github.com/sleighzy/ansible-zookeeper/workflows/Ansible%20Lint/badge.svg)
 
 Ansible role for installing and configuring Apache ZooKeeper on RHEL / CentOS 7.
 
